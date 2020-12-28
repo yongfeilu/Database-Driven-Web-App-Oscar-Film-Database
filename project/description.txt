@@ -1,0 +1,15 @@
+The database application will help users search relevant information on Oscar winning films.
+In general, the database contains 7 entity sets (movie, movie professionals, genre, watchlist,
+award, song, and user) and 11 relevant relationship sets. 
+
+All movie professionals work in certain movies and all movies need professionals to work on
+them (full participation and many-to-many). All movies belong to certain genres and
+vice versa (full participation and many-to-many). Also, it's worth mentioning that there are
+22 types of Oscar awards (some for films, some for film professionals, and one for original 
+songs). A movie professional may win certain awards and an award can be awarded to many 
+professionals (many-to-many). Similarly, the relationship is many-to-many from movie to award. 
+However, all winner songs only get the Best Original Song award (many-to-one). A movie may use 
+certain songs and vice versa (many-to-many). From the perspective of the database users, they can 
+write reviews for various moives (many-to-many), rent or purchase movies to watch (many-to-many), 
+create certain watchlists (one-to-many), and follow these lists (many-to-many). The watchlist may 
+contain certain movies and vice versa (many-to-many).

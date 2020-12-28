@@ -1,0 +1,18 @@
+My final project will center around the Oscar winning films. In general, the 
+database will contain 10 entities, which can be roughly divided into 4 categories--
+people, films, reviews and awards. As for people entities, there will be
+separate relations (or datasets) for actors, directors, writers, producers, music
+responsibles, and production companies. Each relation contains basic information
+for these people. In the films part, we have film and genre entities. Film 
+relation will have attributes descirbing details for all the Oscar winning 
+movies, and the genre will include various kinds of movie types. The relation 
+for reviews will include both the rating and review content for each review, 
+and the relation for awards will contain detailed information for different 
+types of Oscar awards.
+
+Obviously, each film can be boiled down to certain genres, have different people 
+working on it, receive reviews provided by the movie-goers, and win one or more 
+awards. These are the potential relationships we can build upon later in the 
+implementaion process. By exploiting these entities and relationships, we can 
+build a database system which can perform various functions to efficiently find 
+valuable information on moives along with their relevant partners.

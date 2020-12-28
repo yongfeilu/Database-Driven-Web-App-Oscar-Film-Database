@@ -1,0 +1,21 @@
+1.relational schemas derived from the entity sets:
+(1) movie_professional(id int pkey, name string not null, gender string, date_of_birth string, country string, occupation string)
+(2) movie(id int pkey, title string not null, release_date string, length int, language string, budget int, box_office int)
+(3) genre(id int pkey, name string not null)
+(4) song(id int pkey, name string not null, length int, award_id int fkey(award))
+(5) award(id int pkey, name string not null)
+(6) user(id int pkey, name string not null, gender string, email string) 
+(7) watchlist(id int pkey, name string not null, description string, user_id int fkey(user))
+
+
+2.relational schemas derived from the relationship sets:
+(8)  works_in(professional_id int pkey fkey(movie_professional), movie_id int pkey fkey(movie))
+(9)  belongs_to(genre_id int pkey fkey(genre), movie_id int pkey fkey(movie))
+(10) uses(song_id int pkey fkey(song), movie_id int pkey fkey(movie))
+(11) prof_award(mp_id int pkey fkey(mprofessional), a_id int pkey fkey(award), year int not null)
+(12) movie_award(m_id int pkey fkey(movie), a_id int pkey fkey(award), year int not null)
+(13) follows(user_id int pkey fkey(user), movie_id int pkey fkey(movie))
+(14) reviews(user_id int pkey fkey(user), movie_id int pkey fkey(user), text string, submit_time string not null, score int)
+(15) movie_in_list(movie_id int pkey fkey(movie), list_id int pkey fkey(watchlist))
+(16) purchases(movie_id int pkey fkey(movie), user_id int pkey fkey(user), date string not null, amount int, type string, duration int)
+(type: rent or buy, duraton: the number of months)

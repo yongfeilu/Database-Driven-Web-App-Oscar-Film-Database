@@ -1,0 +1,8 @@
+In project 4, I create 2 additioanl tables that are only used for the 2 modification steps in this project.
+The schemas are as follows:
+
+movie_professional_cp(id int serial pkey, name string not null, gender string, date_of_birth date, country string, occupation string)
+movie(id int serial pkey, title string not null, release_date date, length interval hour to minute, language string, budget bigint, box_office bigint)
+
+Correspondingly, I added the 2 create table commands and dropped tables in the create_db.sql and drop_tables.sql. There is no need
+to modify populate_db.sql.
